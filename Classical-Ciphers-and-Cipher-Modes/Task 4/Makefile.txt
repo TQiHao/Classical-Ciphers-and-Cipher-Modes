@@ -1,0 +1,22 @@
+# Makefile for Kamasutra cipher program
+
+PYTHON = python3
+SCRIPT = Kamasutra.py
+TARGET = kamasutra
+
+all: $(TARGET)
+
+$(TARGET): $(SCRIPT)
+	cp $(SCRIPT) $(TARGET)
+	chmod +x $(TARGET)
+
+clean:
+	rm -f $(TARGET) *.txt Output.txt
+
+test:
+	./$(TARGET) -k keyfile.txt
+	./$(TARGET) -e keyfile.txt Ptext-1.txt Ctext-3.txt
+	./$(TARGET) -d keyfile.txt Ctext-3.txt Output.txt
+	diff Output.txt Ptext-1.txt && echo "Test passed!"
+
+.PHONY: all clean test

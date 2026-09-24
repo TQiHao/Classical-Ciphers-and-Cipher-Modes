@@ -1,0 +1,16 @@
+TASK 5 RESULTS
+==================================================
+Student Number: 8931914
+Sum of digits: 35
+c = 35 mod 5 = 0
+
+2-bit CFB Ciphertext: af943d302d3b83
+3-bit CFB Ciphertext: b25bb4fc467bd500
+
+Single-run Times:
+  2-bit CFB: 0.00115310 seconds
+  3-bit CFB: 0.00138880 seconds
+
+Performance Test (1000 iterations):
+  Avg 2-bit CFB: 0.00110097 seconds
+  Avg 3-bit CFB: 0.00072888 seconds
